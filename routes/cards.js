@@ -1,6 +1,6 @@
 const cardsRouter = require("express").Router();
-const {cardsController} = require('../controllers/cards');
+const { getCards } = require("../controllers/cards");
 
-cardsRouter.get("/cards", cardsController);
+cardsRouter.get("/cards", getCards);
 
 module.exports = cardsRouter;
