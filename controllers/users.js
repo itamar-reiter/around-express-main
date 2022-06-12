@@ -2,10 +2,10 @@ const path = require("path");
 
 const getDataFromFile = require("../helpers/files");
 
-const userDataPath = path.join(__dirname, "..", "data", "users.json");
+const usersDataPath = path.join(__dirname, "..", "data", "users.json");
 
 const usersController =  (req, res) => {
-  return getDataFromFile(userDataPath)
+  return getDataFromFile(usersDataPath)
     .then((users) => res.status(200).send(users))
     .catch((err) => res.status(500).send("Cannot send data"));
 }
